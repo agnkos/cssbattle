@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: #998235;
+        display: grid;
+        place-items: center;
+    }
+
+    .container {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        padding: 10px;
+    }
+
+    .big-leaf {
+        width: 80px;
+        height: 100px;
+        margin-bottom: 20px;
+        background-color: #1A4341;
+    }
+
+    .small-leaf {
+        height: 60px;
+        width: 80px;
+        background-color: #F3AC3C;
+    }
+
+    .big-leaf,
+    .small-leaf {
+        border-radius: 0 50px;
+    }
+
+    .big-leaf--mirror {
+        right: 10px;
+        bottom: -10px;
+    }
+
+    .small-leaf--mirror {
+        top: 10px;
+        right: 10px;
+    }
+
+    .big-leaf--mirror,
+    .small-leaf--mirror {
+        transform: scaleX(-1);
+        filter: FlipH;
+        position: absolute;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="big-leaf"></div>
+        <div class="big-leaf big-leaf--mirror"></div>
+        <div class="small-leaf"></div>
+        <div class="small-leaf small-leaf--mirror"></div>
+    </div>
+</body>
+
+</html>
